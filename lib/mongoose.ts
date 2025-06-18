@@ -23,23 +23,27 @@ if (!cached) {
 
 const dbConnect = async (): Promise<Mongoose> => {
   if (cached.conn) {
+    console.log("Using existing mongoose connection");
     return cached.conn;
   }
+
   if (!cached.promise) {
     cached.promise = mongoose
       .connect(MONGODB_URI, {
-        dbName: "FootBallNews",
+        dbName: "news",
       })
       .then((result) => {
-        console.log("database connected");
+        console.log("Connected to MongoDB");
         return result;
       })
       .catch((error) => {
-        console.log("Error while connecting to the database", error);
-        return error;
+        console.log("Error connecting to MongoDB", error);
+        throw error;
       });
   }
+
   cached.conn = await cached.promise;
+
   return cached.conn;
 };
 
