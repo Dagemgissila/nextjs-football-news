@@ -12,7 +12,7 @@ const TopnavBar = () => {
         <div className="relative w-full max-w-[600px] max-lg:hidden">
           <Input
             placeholder="Search ..."
-            className="paragraph-regular bg-gray-100 dark:bg-gray-900 min-h-[50px] border-none outline-none ring-0 focus:outline-none focus:ring-0 focus:border-none shadow-none"
+            className="paragraph-regular bg-gray-100 dark:bg-gray-900 min-h-[50px] no-focus shadow-none"
           />
         </div>
 

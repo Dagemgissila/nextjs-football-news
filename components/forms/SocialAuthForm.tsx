@@ -6,15 +6,19 @@ import React from "react";
 
 import { toast } from "sonner";
 import { Button } from "../ui/button";
+import { useSearchParams } from "next/navigation";
 
 const SocialAuthForm = () => {
+  const searchParams = useSearchParams();
+  const callbackUrl = searchParams.get("callbackUrl") || "/admin/dashboard";
+
   const buttonClass =
     "bg-gray-100 hover:bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-700 body-medium text-cyan-700 dark:text-white min-h-12 flex-1 rounded-2 px-4 py-3.5 cursor-pointer";
 
   const handleSignIn = async (provider: "github" | "google") => {
     try {
       await signIn(provider, {
-        callbackUrl: "/admin/dashboard",
+        callbackUrl,
         redirect: true,
       });
     } catch (error) {

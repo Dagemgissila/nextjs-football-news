@@ -124,6 +124,10 @@
   }
 }
 
+@utility no-focus {
+  @apply focus-visible:ring-0! focus-visible:ring-transparent! focus-visible:ring-offset-0!;
+}
+
 @utility text_cyan {
   @apply text-cyan-500;
 }

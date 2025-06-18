@@ -20,7 +20,7 @@ const Sidebar = () => {
         <form
           action={async () => {
             "use server";
-            await signOut({ redirectTo: "/admin/login" });
+            await signOut({ redirectTo: "/login" });
           }}
         >
           <Button
