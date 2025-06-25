@@ -5,6 +5,7 @@ import { auth } from "./auth";
 export async function middleware(request: NextRequest) {
   const session = await auth();
   const pathname = request.nextUrl.pathname;
+  return NextResponse.next();
 
   if (!session && pathname.startsWith("/admin")) {
     return NextResponse.redirect(

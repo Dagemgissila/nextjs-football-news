@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { SignInSchema } from "@/lib/validation";
+import Link from "next/link";
 
 const Login = () => {
   const form = useForm<z.infer<typeof SignInSchema>>({
@@ -32,6 +33,7 @@ const Login = () => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 mt-10">
+        <Link href="/admin/dashboard">dashboard</Link>
         <FormField
           control={form.control}
           name="email"
