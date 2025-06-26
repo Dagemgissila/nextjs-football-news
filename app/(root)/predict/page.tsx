@@ -371,7 +371,6 @@ export default function PredictPage() {
               </option>
               <option value="student">Student</option>
               <option value="employee">Employee</option>
-              <option value="freelancer">Freelancer</option>
               <option value="entrepreneur">Entrepreneur</option>
               <option value="unemployed">Unemployed</option>
             </select>
