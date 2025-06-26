@@ -1,10 +1,22 @@
 import React from "react";
-import Navbar from "@/components/home/navigation";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <main className="main_bg relative min-h-screen">
-      <Navbar />
-      {children}
+      {children}{" "}
+      <ToastContainer
+        position="top-center"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </main>
   );
 };

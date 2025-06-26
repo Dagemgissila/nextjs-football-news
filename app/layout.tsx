@@ -16,21 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Football News - Latest Updates, Scores & Analysis",
-  description:
-    "Stay updated with the latest football news, live scores, match highlights, transfer rumors, and expert analysis from around the world.",
-  keywords: [
-    "football news",
-    "soccer news",
-    "live football scores",
-    "match highlights",
-    "football transfer news",
-    "Premier League",
-    "Champions League",
-    "La Liga",
-    "Serie A",
-    "Bundesliga",
-  ],
+  title: "AI Love Triangle Predictor",
 };
 
 export default async function RootLayout({
