@@ -430,7 +430,7 @@ export default function PredictPage() {
                 <input
                   id={`personDatingDuration${i}`}
                   required
-                  placeholder="e.g., 2 years"
+                  placeholder="e.g., 2 years,10 months"
                   className="w-full border border-pink-400 focus:border-pink-600 outline-none p-3 rounded-lg bg-white text-pink-900 placeholder-pink-400 transition"
                   onChange={(e) =>
                     handleChange(i, "datingDuration", e.target.value)
